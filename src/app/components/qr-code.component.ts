@@ -25,7 +25,7 @@ export class QrCodeComponent implements OnInit {
     async ngOnInit() {
         try {
             const hashHex = this.route.snapshot.queryParamMap.get('key');
-            this.qrCodeData = `${window.location.origin}/message?key=${hashHex}`;
+            this.qrCodeData = `${window.location.origin}/christmas/message?key=${hashHex}`;
             console.log(this.qrCodeData, this.route.root);
         } catch (err) {
             console.error('Failed to generate QR code', err);
