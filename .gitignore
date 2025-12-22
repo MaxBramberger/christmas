@@ -41,4 +41,5 @@ testem.log
 .DS_Store
 Thumbs.db
 
-/src/app/messages/**/*
+/public/messages/messages.json
+/public/messages/key_per_person.json
