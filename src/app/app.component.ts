@@ -1,7 +1,6 @@
 import {Component, inject, OnInit} from '@angular/core';
 import {RouterOutlet} from '@angular/router';
 import {EncryptedKVStoreService} from "./util/key-value-store.service";
-import {MESSAGES} from "./util/initial-store";
 import {DisplayMessageComponent} from "./components/message-display.component";
 import {MarkdownComponent} from "ngx-markdown";
 

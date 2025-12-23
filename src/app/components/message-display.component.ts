@@ -2,7 +2,7 @@ import {Component, OnInit} from "@angular/core";
 import {ActivatedRoute} from "@angular/router";
 import {EncryptedKVStoreService} from "../util/key-value-store.service";
 import {NgIf} from "@angular/common";
-import {MarkdownComponent, MarkdownModule, MarkdownService, provideMarkdown} from "ngx-markdown";
+import {MarkdownComponent, provideMarkdown} from "ngx-markdown";
 
 @Component({
     selector: 'app-display-message',
