@@ -2,15 +2,16 @@ import {Component, OnInit} from "@angular/core";
 import {ActivatedRoute} from "@angular/router";
 import {EncryptedKVStoreService} from "../util/key-value-store.service";
 import {NgIf} from "@angular/common";
-import {MarkdownComponent} from "ngx-markdown";
+import {MarkdownComponent, MarkdownModule, MarkdownService, provideMarkdown} from "ngx-markdown";
 
 @Component({
     selector: 'app-display-message',
     templateUrl: 'message-display.component.html',
     imports: [
         NgIf,
-        MarkdownComponent
+        MarkdownComponent,
     ],
+    providers: [provideMarkdown({}),],
     styleUrl: 'message-display.component.scss',
     standalone: true
 })

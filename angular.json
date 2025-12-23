@@ -27,7 +27,6 @@
             "inlineStyleLanguage": "scss",
             "assets": [
               {
-                "ignore": ["messages/**/*"],
                 "glob": "**/*",
                 "input": "public"
               }
@@ -39,6 +38,15 @@
           },
           "configurations": {
             "production": {
+              "assets": [
+                {
+                  "ignore": [
+                    "messages/**/*"
+                  ],
+                  "glob": "**/*",
+                  "input": "public"
+                }
+              ],
               "budgets": [
                 {
                   "type": "initial",
