@@ -20,6 +20,7 @@
             "outputPath": "dist/christmas",
             "index": "src/index.html",
             "browser": "src/main.ts",
+            "baseHref": "/christmas/",
             "polyfills": [
               "zone.js"
             ],
