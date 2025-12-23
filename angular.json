@@ -27,7 +27,8 @@
             "inlineStyleLanguage": "scss",
             "assets": [
               {
-                "glob": "*",
+                "ignore": ["messages/**/*"],
+                "glob": "**/*",
                 "input": "public"
               }
             ],

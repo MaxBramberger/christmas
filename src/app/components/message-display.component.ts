@@ -2,21 +2,16 @@ import {Component, OnInit} from "@angular/core";
 import {ActivatedRoute} from "@angular/router";
 import {EncryptedKVStoreService} from "../util/key-value-store.service";
 import {NgIf} from "@angular/common";
+import {MarkdownComponent} from "ngx-markdown";
 
 @Component({
     selector: 'app-display-message',
-    template: `
-        <div *ngIf="message; else noMessage">
-            <h2>Message:</h2>
-            <p>{{ message }}</p>
-        </div>
-        <ng-template #noMessage>
-            <p>No message found for this key.</p>
-        </ng-template>
-    `,
+    templateUrl: 'message-display.component.html',
     imports: [
-        NgIf
+        NgIf,
+        MarkdownComponent
     ],
+    styleUrl: 'message-display.component.scss',
     standalone: true
 })
 export class DisplayMessageComponent implements OnInit {
@@ -25,7 +20,8 @@ export class DisplayMessageComponent implements OnInit {
     constructor(
         private route: ActivatedRoute,
         private store: EncryptedKVStoreService
-    ) {}
+    ) {
+    }
 
     async ngOnInit() {
         // Get query parameter 'key' from the URL
